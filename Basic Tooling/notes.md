@@ -32,14 +32,25 @@ A list of extensions that we will be using are:
 (TDD Snippets - Adds TDD Snippets for writing tests quickly)
 
 
+Other Notes:   
+
+
 Set the default shell to bash, for ease in using the command line in future. 
 
 Extensions can be installed manually, by using the Extensions tab on the left side of the UI, or from the command line. 
 
 To setup installation from the command line, we must first access the command pallette, (⇧⌘P), and type "Shell Command: Install 'code' Command in Path" 
 
-From then on, extensions can be installed using the "code --install-extension {extensionName}" directly from the command line
+From then on, extensions can be installed using the "code --install-extension {extensionName}" directly from the command line, take care in using the correction extension name otherwise errors could be encountered  
+
+
 
 
 Notes on Postman
+
+
+
+Postman is used for API development, creating HTTP requests (GET, POST, FETCH, etc...), setting up Collections (Groups of saved requests), and for segregating multiple projects. It can also be used to easily export Collections in JSON format. Also supports environment variables to simplify the creation of HTTP requests, using double brackets, ex: {{variableName}}...  
+
+Procedure for creating a new Collection is as follows: 
 
