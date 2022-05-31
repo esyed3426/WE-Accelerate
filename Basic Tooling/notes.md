@@ -13,14 +13,22 @@ why it is so commonplace. It also supports a wide range of extensions to help ou
 A list of extensions that we will be using are:
 
 (ES Lint - Integrates ES Lint JavaScript into VS Code)
-(npm - Runs npm scripts defined in the package.json file and validates the installed modules against the dependencies defined in package.json)
-(NPM IntelliSense - Autocompletes npm modules in import statements)
-(DotENV - Adds support for .env file syntax)
-(EditorConfig - Adds EditorConfig Support for Visual Studio Code)
-(GraphQL for VSCode - GraphQL syntax highlighting, linting, auto-complete, etc...)
-(Debugger for Chrome - Debugs JavaScript code in the Chrome browser, or any other target that supports the Chrome Debugger protocol)
-(E S7 React/Redux/GraphQL/React-Native snippets - Adds snippets for React, Redux and Graphql in JS/TS with ES7 syntax)
-(SQL Server (mssql) - Adds support for SQL development)
+(npm - Runs npm scripts defined in the package.json file and validates the installed modules against the dependencies defined in package.json)  
+
+(NPM IntelliSense - Autocompletes npm modules in import statements)   
+
+(DotENV - Adds support for .env file syntax)   
+
+(EditorConfig - Adds EditorConfig Support for Visual Studio Code)    
+
+(GraphQL for VSCode - GraphQL syntax highlighting, linting, auto-complete, etc...)   
+
+(Debugger for Chrome - Debugs JavaScript code in the Chrome browser, or any other target that supports the Chrome Debugger protocol)   
+
+(E S7 React/Redux/GraphQL/React-Native snippets - Adds snippets for React, Redux and Graphql in JS/TS with ES7 syntax)    
+
+(SQL Server (mssql) - Adds support for SQL development)    
+
 (TDD Snippets - Adds TDD Snippets for writing tests quickly)
 
 
