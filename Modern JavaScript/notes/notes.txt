@@ -107,3 +107,11 @@ This is another way of working with Promises in ES6. You MUST use a try/catch. T
 ES6 Features: 
 
 http://es6-features.org/
+
+Exercise Notes:
+
+The package.json file records important metadata about a project.
+npm DOES NOT include the start script, which you can add in manually <<"start": "node src/index.js">>
+
+You can run the app (YOU MUST BE IN THE SAME DIRECTORY AS THE THE PACKAGE.JSON FILE) by using the command
+npm run start
