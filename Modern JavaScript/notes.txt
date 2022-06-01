@@ -51,3 +51,46 @@ Classes: (Important aspects of ES6)
 
 The class keyword is used to initialize a class. The main difference is that there is a lack of
 private members in the 
+
+
+Variables: 
+
+Var:
+    Function scoped
+    Undefined when accessing a variable before declaration
+
+Const:
+    Block scoped
+    ReferenceError when accessing before declaration
+    Cannot be reassigned
+
+Let:
+    Block scoped 
+    ReferenceError when accessing before declaration
+
+JavaScript uses hoisting which means you can use variables before declaration. JavaScript tosses the declaration of 
+variables to the top of the file when interpreting. This can lead to bad coding practices. A way to avoid these problems
+is to use Const or Let to avoid hoisting and common pitfalls.
+
+
+Hoisting: 
+Variable, function, and class declarations are "moved to the top" of their scope. 
+
+Closure: 
+A closure is the comvination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment)
+RESEARCH MORE ON This
+
+Asynchronous JavaScript:
+
+JS is a synchronous, blocking, single-threaded language, which means only one operation can be in progress at a time.
+But there are ways of making it behave asynchronously.
+
+3 common approaches are:
+    Callbacks
+    Promises
+    Async/Await
+
+Callbacks: 
+
+A callback is a function that gets passed to another function as a parameter, which can then be executed as necessary.
+
