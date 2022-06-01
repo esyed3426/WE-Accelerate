@@ -1,0 +1,5 @@
+Notes on Javascript:
+
+Javascript is a high-level interpreted programming language. It can run without running through a compiler.
+It has a lot of abstraction, differentiating it from low-level languages. It can run in both the browser/client as 
+well as server side. It conforms to ECMA Specification. 
