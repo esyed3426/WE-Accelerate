@@ -47,9 +47,25 @@ From then on, extensions can be installed using the "code --install-extension {e
 Notes on Postman
 
 
-Postman is used for API development, creating HTTP requests (GET, POST, FETCH, etc...), setting up Collections (Groups of saved requests), and for segregating multiple projects. It can also be used to easily export Collections in JSON format. Also supports environment variables to simplify the creation of HTTP requests, using double brackets, ex: {{variableName}}...  
+Postman is used for API development, creating HTTP requests (GET, POST, FETCH, etc...), setting up Collections (Groups of saved requests), and for segregating multiple projects. It can also be used to easily export Collections in JSON format. Also supports environment variables to simplify the creation of HTTP requests, using double brackets, ex: {{environmentVariableName}}...  
 
-The procedure for creating a new Collection is as follows: 
+The procedure for creating a new Collection with some requests is as follows: 
+
+Open Postman, go to New -> Collection, and rename it to something of your choice. Add requests into it using the New -> Request and then 
+specify which type. 
+
+HTTP Requests:
+
+GET -> Input the URL. The params set should auto populate. Hit SEND to send and if the destination exists, it should return a 200 OK code.
+POST -> Input the URL. Click the Body tab and select Raw. From the dropdown, select JSON. Add a JSON test object and send it. It should also return a 200 OK Code.
+
+Environment Variables: 
+
+Environment variables are of text form, and can be used in URLS using double brackets {{environmentVariableName}}. To create a new 
+environment variable, click the eye under the top right corner, then add a variable. You give it a name, then an initial and current value,
+sometimes, the current value auto-populates. When updating the initial value, also update the current value as it does not auto update. 
+
+
 
 
 
