@@ -47,4 +47,11 @@ callApi('http://some-api/v1', onSuccess);
 
 // End of callbacks
     
+
+// Promises:
+// Promises can succeed or fail, and are much cleaner than other options
+
+
+
+
     

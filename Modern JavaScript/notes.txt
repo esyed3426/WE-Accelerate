@@ -93,4 +93,17 @@ But there are ways of making it behave asynchronously.
 Callbacks: 
 
 A callback is a function that gets passed to another function as a parameter, which can then be executed as necessary.
+Ex: Take my number, once you've finished a task I have assigned you, call me. 
 
+Promises:
+
+A Promise is a special object that allows you to invoke asynchronous operations (like an HTTP call), with a promise of their eventual
+resolution (or rejection, in case of an error)
+
+Async/Await:
+
+This is another way of working with Promises in ES6. You MUST use a try/catch. This cleans up syntax and makes code more readable. 
+
+ES6 Features: 
+
+http://es6-features.org/
