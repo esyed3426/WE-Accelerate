@@ -1,12 +1,11 @@
 Overview:
 
-
 The content today spans VS Code, which is to be used as our 'default' environment, and Postman, which is to be used for creating
 and exporting HTTP requests in JSON (JavaScript Object Notation). 
 
 
-
 Notes on VS Code: 
+
 
 VS Code is generally used as a multi-purpose text editor, and has built-in support for Git, as well as hundreds of languages, which is 
 why it is so commonplace. It also supports a wide range of extensions to help out with other things (Public Extensibility Model).
@@ -33,8 +32,8 @@ A list of extensions that we will be using are:
 (TDD Snippets - Adds TDD Snippets for writing tests quickly)
 
 
+Other Notes:  
 
-Other Notes:   
 
 Set the default shell to bash, for ease in using the command line in future. 
 
@@ -47,7 +46,10 @@ From then on, extensions can be installed using the "code --install-extension {e
 
 Notes on Postman
 
+
 Postman is used for API development, creating HTTP requests (GET, POST, FETCH, etc...), setting up Collections (Groups of saved requests), and for segregating multiple projects. It can also be used to easily export Collections in JSON format. Also supports environment variables to simplify the creation of HTTP requests, using double brackets, ex: {{variableName}}...  
 
-Procedure for creating a new Collection is as follows: 
+The procedure for creating a new Collection is as follows: 
+
+
 
