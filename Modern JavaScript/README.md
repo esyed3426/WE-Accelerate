@@ -1,0 +1,1 @@
+This folder contains notes on the Modern JavaScript lesson from the stream. 
