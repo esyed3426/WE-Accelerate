@@ -30,17 +30,4 @@ myFetchPromise
     .catch((err) => console.error(err));
 
 
-// same thing now via the Async/Await approach
-// REVIEW THIS STUFF
-
-async function myAsyncFunc() {
-    try {
-        console.log('1. start fetching the url...');
-        const response = await fetch('url');
-        console.log('3. data fetched!');
-        const data = await response.json();
-        console.log('4, here is the data: ', data);
-    } catch (error) {
-        console.log('Error: ', error);
-    }
-}
+// REVIEW PROMISES, AWAIT AND ASYNC FUNCTIONS, CALLBACKS
