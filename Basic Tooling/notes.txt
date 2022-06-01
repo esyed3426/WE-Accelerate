@@ -64,8 +64,3 @@ Environment Variables:
 Environment variables are of text form, and can be used in URLS using double brackets {{environmentVariableName}}. To create a new 
 environment variable, click the eye under the top right corner, then add a variable. You give it a name, then an initial and current value,
 sometimes, the current value auto-populates. When updating the initial value, also update the current value as it does not auto update. 
-
-
-
-
-
