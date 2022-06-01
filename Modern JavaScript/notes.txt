@@ -28,3 +28,26 @@ by whatever the variable is initialized as
 
 <<this>> keyword represents the context of which the function will execute and can vary
 
+Arrow function expressions are:
+
+Shorthand notation for regular function expression
+• Doesn’t have its own bindings to this, arguments, super keywords
+
+Example: 
+
+<<
+const sumTwo = (n1, n2) => n1 + n2
+>>
+
+is equivalent to 
+
+<<
+function sumTwo(n1, n2) {
+    return n1 + n2;
+}
+>>
+
+Classes: (Important aspects of ES6) 
+
+The class keyword is used to initialize a class. The main difference is that there is a lack of
+private members in the 
