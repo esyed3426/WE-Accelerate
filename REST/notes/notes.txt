@@ -18,7 +18,49 @@ Different types of APIs:
 
     Operation Systems:
         Specifies the interface between and application and the operating system
-        
+
     Web Services:
         The interface for one application to exchange data with another over the Web
+
+
+We will will be focusing on web services and web APIs. 
+
+Message Protocol vs Transport Protocol
+
+Message Protocol:
+    Structure and format of messages
+    Ex. SOAP (Simple Object Access Protocol)
+
+Transport Protocol:
+    Exchange of messages
+    Ex. HTTP, WebSocket, TCP WebSocket
+
+What is a REST API?
+
+REST stands for REpresentational State Transfer
+
+It has an architectural style for sharing data between applications and is comprised of 6 architectural constraints.
+Implemented over HTTP. 
+
+REST is comprised of:
+    Services
+    Resources
+    Representations
+    Verbs
+
+The 6 Architectural constraints of rest:
+
+Uniform Interface:
+    Define the interface between the client and the server
+    Simplifies and decouples architecture
+    Restful design
+        HTTP verbs (e.g. GET, PUT, POST, DELETE)
+    
+Stateless:
+    The server does not remember anything about the user using the API
+    Each individual request contains all the information the server needs to perform the request
+    and return a response, regardless of other requests made by the same API user
+
+
+
 
