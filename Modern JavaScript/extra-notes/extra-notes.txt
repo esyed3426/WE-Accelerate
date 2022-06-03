@@ -1,0 +1,10 @@
+This is a review of callbacks, promises, and async/await syntax.
+
+Callbacks, promises, and async/await are methods to deal with asynchronous data. 
+
+Asynchronous programming is a technique that enables your program to start
+a potentially lengthy task, and rather than having to wait until that task is finished, to
+continue to respond to other events while that task runs. You can move to another task before
+the previous one is completed.
+
+Callbacks were widely used until the release of ES6 when promises were introduced
