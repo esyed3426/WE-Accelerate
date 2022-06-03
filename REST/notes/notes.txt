@@ -61,6 +61,28 @@ Stateless:
     Each individual request contains all the information the server needs to perform the request
     and return a response, regardless of other requests made by the same API user
 
+Client-Server Separation:
+    The client and server act independenly, each on its own
+    Interaction between them is only in the form of requests, initiated by the client only
+    The server only responds in reaction to a request from a client
+
+Cacheable:
+    Server resopnse contains information about whether or not the data is Cacheable
+    Client can avoid requestion the same data multiple times
+    Client should know when the current version of the data expires
+
+Layered System:
+    Between the client who requests a resource and the server who responds, there might be a number of servers in the middle
+    These servers might provide a security layer, caching layer, load-balancing layer or other functionality
+    Additional layers should not affect request or response
+
+Code-on-demand:
+    Client can request code from teh server, usually in the form of a script
+    The client can then execute that code
+
+
+
+
 
 
 
