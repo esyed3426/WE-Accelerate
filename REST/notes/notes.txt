@@ -1,2 +1,24 @@
 Notes for REST. 
 
+Documentation is very important. APIs are often undocumented for some reason. 
+
+Interface - User Interface -> THe portion of an application that is exposed to the outisde world for users to interact with
+
+API - Application Programming Interface
+
+Think about APIs as the public entry points into a system. 
+
+Their audiences are developers or other applications. 
+APIS are generally a collection of functions or methods with known signatures and data models that 
+can garner data for you. 
+
+Different types of APIs:
+    Libraries and Frameworks:
+        Software Libraries
+
+    Operation Systems:
+        Specifies the interface between and application and the operating system
+        
+    Web Services:
+        The interface for one application to exchange data with another over the Web
+
