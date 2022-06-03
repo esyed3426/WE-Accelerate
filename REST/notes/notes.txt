@@ -77,7 +77,7 @@ Layered System:
     Additional layers should not affect request or response
 
 Code-on-demand:
-    Client can request code from teh server, usually in the form of a script
+    Client can request code from the server, usually in the form of a script
     The client can then execute that code
 
 
