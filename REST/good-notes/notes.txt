@@ -3,4 +3,10 @@ I am going to begin writing from the exercise onwards.
 The exercise consists of starting a server and listening on port 3000 for connections. The app will respond with "Hello world!" if 
 the url is the source url and a 404 error message otherwise.
 
-We import express, and create an app using it. Remember the port that the clients will connect to. 
+We import express, and create an app using it. Remember the port that the clients will connect to. We use the get method to create a 
+route handler. 
+
+A route handler is code that is looking (listening) for a specific incoming url and often a specific HTTP verb (app.get(), app.post(),
+ etc...), and then responds to it. The first parameter is usually the url it is listening on, and the second is a (callback) function that
+will execute upon receiving a request.
+
