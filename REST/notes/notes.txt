@@ -81,6 +81,46 @@ Code-on-demand:
     The client can then execute that code
 
 
+Doctors and Patients:
+
+Problem Statement:
+    You are a web developer building a healthcare product
+    You need to retrieve patient data from the server
+    What are some of the typical ways to retrieve data in this scenario?
+
+REST Implementation
+    Supports any hypertext format (JSON, KML etc...)
+    CRUD Operations (GET, PUT, POST, DELETE)
+    APIs are independent of the client
+    Fewer resources in transprt as well as description
+    Caching utilizes less network resources
+
+
+API path naming conventions
+
+Avoid verbs, plural nouns are good. 
+Filtering occurs after using a '?'. Everything after that is a query string. A query string is
+is key-value pairs of parameters passed to your API.
+
+
+HTTP Verbs:
+
+GET - Retreive a representation of a resource
+PUT - Update an existing entity
+DELETE - Delete an existing entity
+POST - Create a new entity
+
+
+Potention pitfalls of REST
+
+They are synchronous and hence resource intensive
+They offer fewer verbs to operate on
+
+Loses relationships between entities
+
+Often misused losing scalability
+
+
 
 
 

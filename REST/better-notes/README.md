@@ -1,0 +1,1 @@
+Respectfully, this guy went off on tangents way too much, or maybe I'm just stupid. I'm 
