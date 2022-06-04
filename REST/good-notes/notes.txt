@@ -1,0 +1,6 @@
+I am going to begin writing from the exercise onwards. 
+
+The exercise consists of starting a server and listening on port 3000 for connections. The app will respond with "Hello world!" if 
+the url is the source url and a 404 error message otherwise.
+
+We import express, and create an app using it. Remember the port that the clients will connect to. 
