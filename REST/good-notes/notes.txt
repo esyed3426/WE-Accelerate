@@ -10,3 +10,7 @@ A route handler is code that is looking (listening) for a specific incoming url 
  etc...), and then responds to it. The first parameter is usually the url it is listening on, and the second is a (callback) function that
 will execute upon receiving a request.
 
+Full documentation can be found at https://expressjs.com/en/4x/api.html#app.METHOD 
+
+With express, any path without a handler will return a 404 error.
+

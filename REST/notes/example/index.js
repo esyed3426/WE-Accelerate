@@ -4,7 +4,7 @@ const { PORT = 3000 } = process.env;
 import bodyParser from "body-parser";
 import cors from "cors";
 app.use(bodyParser.json()).use(cors());
-app.get("/", (request, response) => response.send("Hello World"));
+app.get("/", (request, response) => response.send("hello world"));
 app.get("/healthcheck", (req, res) => {
     let healthcheck = {
         uptime: process.uptime(),

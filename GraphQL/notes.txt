@@ -1,0 +1,5 @@
+GraphQL is a flexible layer that sits on top of all your data sources. 
+Fields from different sources can be mixed and matched in a query.
+Retrieve only the data you need and nothing else. 
+
+This limits how much information is actually returned 
