@@ -1,0 +1,112 @@
+What is React:
+
+React is a declarative JavaScript library created by Facebook (Meta) for rendering views in applications.
+At its core, it used Virtual DOM to process updates to the view. 
+DOM - Document Object Model -> The way we interact with the browser to make changes to a web page. 
+It endorses a component-based architecture, where an application is a tree of components.
+MVC - Model View Controller -> React is not a MVC framework
+React is used to build user interfaces in Single Page Applications (SPAs), mobile apps and more...
+
+Functional Programming Concepts:
+
+We will review some important functional programming concepts such as...
+
+    Immutability
+        Data structures that should not be mutated
+    Pure Functions
+    Side Effects
+
+Pure Functions:
+
+A pure function is a function that meets the following criteria...
+
+    The same inputs produce the same outputs
+    Had no side effects
+
+------------------
+
+On the side: 
+Unit Testing is a concept in SE, a form of application testing typically done by SEs,  unit testing is programmaticly creating code
+that tests pieces of an application. It makes sure that we don't break existing functionality.
+
+------------------
+
+Side Effects:
+
+Side effects are any application state change that is observed outside of the function
+
+
+------------------
+
+Building Blocks:
+
+Components
+    Are the core building blocks in React
+    Follow strict encapsulation principles - each in independent and reusable
+
+Composition
+    Components can be compsed of other components
+    Oftentimes, Reach apps have a top-level 'App' component
+
+Elements
+    Components return elements
+    They describle what should appear on the screen
+    Virtual DOM updates the DOM to match the React elements
+
+Props
+    Components are passed inputs, called 'props'
+    Props are treated as immutable
+
+State
+    Components may or may not have state
+    State is local to the component only and not accessible outside
+
+------------------
+
+Why choose React?
+
+Makes JavaScript more structured, easier to write
+Runs faster than JavaScript with HTML + CSS + jQuery/AJAX
+Well-supported development platform & ecosystem
+
+Benefits:
+    Allows front end engineers to focus on building User interfaces
+    Allows for "snappier" apps and rich user interactions
+    Delegate business logic to browser and mobile devices to reduce the need for heavy servers (in Single Page Applications)
+    Architecture is web and mobile friendly
+
+------------------
+
+Characteristics of React:
+
+Virtual DOM:
+
+React uses a virtual DOM to compare changes between render function calls in memory and makes minimal changes to the real DOM
+
+One Way Data Flow:
+
+Immutable data is passed to React components to be rendered
+No more two way data binding
+Components cannot modify data being passed to it, but instead they can trigger actions to change component state 
+Overall application data flow is done with other frameworks such as Redux
+
+Components Lifecycle:
+
+The basic life of a React component:
+
+Mount
+    The component has been created and added to the DOM
+Render
+    The component may render and re-render for a while
+Demount
+    The component is no longer needed
+
+Component Rendering:
+
+When does a component re-render? -> Any time state or props change.
+
+Why would it be a bad idea to update state in render? -> You might get caught in an infinite loop as state updates
+
+How to prevent unnecessary re-renderes?
+    Pass only the props we need
+    If props have changed, but their values are equivalent, a re-render will still occur by default
