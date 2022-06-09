@@ -110,3 +110,45 @@ Why would it be a bad idea to update state in render? -> You might get caught in
 How to prevent unnecessary re-renderes?
     Pass only the props we need
     If props have changed, but their values are equivalent, a re-render will still occur by default
+
+JSX - JavaScript XML
+
+React doesn't use HTML templates like other SPA frameworks
+Instead, it uses JSX, an HTML like extension syntax that gets processed into JavaScript
+Anything in curly braces is a JavaScript expression 
+
+Hooks:
+
+They hook into the React API
+Maintain local state
+Reuse stateful logic
+
+Rules for Hooks:
+
+Hooks are only for React function components. Can't use them in regular JavaScript Functions
+Only calls hooks at the top level (don't nest them in loops, conditions or other functions)
+You can have many hooks in a React component, but the order in which they are called must be the same
+You can compose your own custom hooks from built in hooks
+
+Hooks -> useState
+
+Most common hook that addresses a very common concern
+    Adds the ability to manage local state within a React component
+
+It's just a function that returns a 2-item array:
+    stateValue - a reference to the current state value
+    setStateValue - a reference to a function that updates state (ie. setter)
+    Takes an optional defaultValue parameter, which is the initial state value (undefined by default)
+
+When state is updated, the React component will re-render
+
+Hooks -> useEffect
+
+A versatile hook that lets you run side-effects in React Components
+Always runs after a component renders (either after every render, only once, or on specific conditions)
+Multiple calls to this hook are encouraged, one for each logical concern
+
+When does useEffect run? -> After React has committed updates (rendered) and optionally, based on the deps Model
+
+
+
