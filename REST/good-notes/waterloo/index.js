@@ -4,6 +4,9 @@ const { PORT = 3000 } = process.env; // Try to get the port from the environment
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import data from './data.js';
+import * as utilities from './utils/functions.js'
+import swaggerUi from "swagger-ui-express";
+import swaggerDocument from "./swagger.json" assert { type: 'json'};
 
 app.use(bodyParser.json()).use(cors());
 
@@ -16,6 +19,9 @@ app.get("/api/v1/doctors", (req, res) => {
 });
 
 app.get("/api/v1/doctors/:id", (req, res) => {
+    if (utilities.isInValidId(req.params.id)) {
+        return res.status(400).json({error: "Invalid id."});
+    }
     const id = parseInt(req.params.id);
     const doctor = data.doctors.find((doc) => doc.id === id);
     if (!doctor) {
@@ -23,7 +29,6 @@ app.get("/api/v1/doctors/:id", (req, res) => {
     }
     res.json(doctor);
 });
-
 
 
 
@@ -42,6 +47,38 @@ app.get("/healthcheck", (req, res) => {
     }
 });
 
+// POST
+
+app.post("/api/v1/doctors", (req, res) => {
+    if (!req.body.name) {
+        return res.status(400).json({error: "Doctor needs a name parameter."});
+    }
+    const nextId = data.doctors.length + 1;
+    const doctor = { id: nextId, name: req.body.name };
+    data.doctors.push(doctor);
+    res.status(201).json(doctor);
+});
+
+
+app.get("/api/v1/visits", (req, res) => {
+    const { doctorid, patientid } = req.query;
+    let visits = data.visits;
+    if (doctorid) {
+        visits = visits.filter(
+            (visit) => visit.doctorid === parseInt(doctorid, 10)
+        );
+    }
+    if (patientid) {
+        visits = visits.filter(
+            (visit) => visit.patientid === parseInt(patientid, 10)
+        );
+    }
+    return res.json(visits);
+}
+);
+
+app.use("/api/v1/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 app.listen(PORT, () => 
-    console.log(`Hello World, I'm listening on http:localhost:${PORT}/`)
+    console.log(`Hello World, I'm listening on http:localhost:${PORT}/api/v1/docs`)
 );
