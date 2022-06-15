@@ -77,18 +77,19 @@ app.post("/api/v1/doctors", (req, res) => {
     res.status(201).json(doctor);
 });
 
+
 app.post("/api/v1/patients", (req, res) => {
     if (!req.body.name) {
         return res.status(400).json({error: "Patient needs a name parameter."});
     }
     const nextId = data.patients.length + 1;
     const patient = { id: nextId, name: req.body.name };
-    data.doctors.push(patient);
+    data.patients.push(patient);
     res.status(201).json(patient);
 });
 
 
-app.get("/api/v1/visits", (req, res) => {
+/* app.get("/api/v1/visits", (req, res) => {
     const { doctorid, patientid } = req.query;
     let visits = data.visits;
     if (doctorid) {
@@ -102,8 +103,25 @@ app.get("/api/v1/visits", (req, res) => {
         );
     }
     return res.json(visits);
-}
-);
+}); */
+
+app.get("/api/v1/visits", (req, res) => {
+    const { doctorid, patientid } = req.query;
+    let visits = data.visits;
+
+    if (doctorid) {
+        visits = visits.filter(
+            (visit) => visit.doctorid === parseInt(doctorid, 10)
+        );
+    }
+
+    if (patientid) {
+        visits = visits.filter(
+            (visit) => visit.patientid === parseInt(patientid, 10)
+        );
+    }
+    return res.json(visits);
+});
 
 app.use("/api/v1/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
