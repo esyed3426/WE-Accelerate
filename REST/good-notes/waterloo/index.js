@@ -7,6 +7,7 @@ import data from './data.js';
 import * as utilities from './utils/functions.js'
 import swaggerUi from "swagger-ui-express";
 import swaggerDocument from "./swagger.json" assert { type: 'json'};
+import { util } from 'chai';
 
 app.use(bodyParser.json()).use(cors());
 
@@ -16,6 +17,10 @@ app.get("/", (request, response) =>
 
 app.get("/api/v1/doctors", (req, res) => {
     res.json(data.doctors);
+});
+
+app.get("/api/v1/patients", (req, res) => {
+    res.json(data.patients);
 });
 
 app.get("/api/v1/doctors/:id", (req, res) => {
@@ -28,6 +33,19 @@ app.get("/api/v1/doctors/:id", (req, res) => {
         res.status(404).json({error: "Doctor not found."});
     }
     res.json(doctor);
+});
+
+app.get("/api/v1/patients/:id", (req, res) => {
+    if (utilities.isInValidId(req.params.id)) {
+        return res.status(400).json({error: "Invalid id."});
+    }
+    const id = parseInt(req.params.id);
+    const patient = data.patients.find((patient) => patient.id === id);
+    if (!patient) {
+        res.status(404).json({error: "Patient not found."});
+    }
+    res.json(patient);
+
 });
 
 
@@ -57,6 +75,16 @@ app.post("/api/v1/doctors", (req, res) => {
     const doctor = { id: nextId, name: req.body.name };
     data.doctors.push(doctor);
     res.status(201).json(doctor);
+});
+
+app.post("/api/v1/patients", (req, res) => {
+    if (!req.body.name) {
+        return res.status(400).json({error: "Patient needs a name parameter."});
+    }
+    const nextId = data.patients.length + 1;
+    const patient = { id: nextId, name: req.body.name };
+    data.doctors.push(patient);
+    res.status(201).json(patient);
 });
 
 
