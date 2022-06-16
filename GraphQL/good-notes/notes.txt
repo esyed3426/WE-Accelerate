@@ -1,0 +1,1 @@
+GraphQL is a query language for APIs, and a 
