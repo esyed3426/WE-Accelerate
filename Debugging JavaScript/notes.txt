@@ -1,1 +1,19 @@
 Some notes about debugging javascript.
+
+Types of errors:
+
+Syntax Errors:
+
+    Mispelling things, missing semicolons, and such. The IDE usually catches these.
+
+Runtime Errors:
+
+    Where code fails to execule or had unexpected behaviour
+    Like an infinite loop
+    IDEs do not usually catch these
+
+Semantic (or logical) errors:
+
+    All syntax and runtime errors are not present, this is human error
+    ie. area = width + height instead of area = width * height
+    The IDE may not pick up the errors.
