@@ -1,0 +1,37 @@
+{
+  "name": "debugging-rest-api",
+  "version": "1.0.0",
+  "description": "debugging rest api exercises",
+  "main": "data.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^3.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "debug": "node --inspect-brk index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.platform.manulife.io:2222/mu-materials/debugging-javascript/rest-api-debugging.git"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "keywords": [],
+  "author": "Ray Wang",
+  "license": "ISC"
+}

@@ -17,3 +17,13 @@ Semantic (or logical) errors:
     All syntax and runtime errors are not present, this is human error
     ie. area = width + height instead of area = width * height
     The IDE may not pick up the errors.
+
+
+Traditional Debugging:
+
+We can use
+    console.Time and console.TimeEnd
+    console.assert will log when value is falsy value
+    console.table
+    console.clear
+    console.dir
