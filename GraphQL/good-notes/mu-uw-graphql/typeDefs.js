@@ -3,7 +3,8 @@ const { gql } = require('apollo-server');
 const typeDefs = gql`
     type Query {
         message: String
-        patient(id: ID!): Patient  
+        patient(id: ID!): Patient 
+        doctor(id: ID!): Doctor 
     }
 
     type Patient {
@@ -15,6 +16,7 @@ const typeDefs = gql`
     type Doctor {
         id: ID
         name: String
+        patients: [Patient]
     }
 `;
 module.exports = typeDefs;
