@@ -14,18 +14,18 @@
         "cors": "^2.8.4",
         "dotenv": "^5.0.1",
         "express": "^4.0.0",
-        "swaggerize-express": "^4.0.0",
+        "swaggerize-express": "^4.0.5",
         "swaggerize-ui": "^1.0.1",
         "swagmock": "~0.0.2"
     },
     "devDependencies": {
-        "eslint": "^2",
-        "tape": "^4",
-        "istanbul": "~0.4.3",
+        "eslint": "^8.18.0",
         "is-my-json-valid": "^2.13.1",
+        "istanbul": "~0.4.3",
         "js-yaml": "^3.2.6",
-        "supertest": "^1.2.0",
-        "swagger-parser": "^3.4.1"
+        "supertest": "^6.2.3",
+        "swagger-parser": "^3.4.1",
+        "tape": "^4"
     },
     "engines": {
         "node": "10.x.x"
