@@ -1,0 +1,556 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "A simple RESTful API for doctors and patients",
+        "version": "1.0.0",
+        "title": "Doctors and Patients"
+    },
+    "host": "rest-example.apps.cac.preview.pcf.manulife.com",
+    "basePath": "/v1",
+    "tags": [
+        {
+            "name": "patient",
+            "description": "Everything about a patient"
+        },
+        {
+            "name": "doctor",
+            "description": "Everything about a doctor"
+        },
+        {
+            "name": "visit",
+            "description": "Everything about a visit"
+        }
+    ],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/patient/{id}": {
+            "get": {
+                "tags": [
+                    "patient"
+                ],
+                "summary": "Get a patient by Id",
+                "description": "",
+                "operationId": "getPatient",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The patient with the given ID",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Patient"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/ApiResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/patients": {
+            "get": {
+                "tags": [
+                    "patient"
+                ],
+                "summary": "Get all patients",
+                "description": "",
+                "operationId": "getPatients",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of patients",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Patients"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/ApiResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/patient": {
+            "post": {
+                "tags": [
+                    "patient"
+                ],
+                "summary": "Add a new patient",
+                "description": "",
+                "operationId": "addPatient",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Patient"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The patient that was inserted",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Patient"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/ApiResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/doctor/{id}": {
+            "get": {
+                "tags": [
+                    "doctor"
+                ],
+                "summary": "Get a doctor by Id",
+                "operationId": "getDoctor",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the doctor to retrieve",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The doctor with the given ID",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Doctor"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/ApiResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/doctors": {
+            "get": {
+                "tags": [
+                    "doctor"
+                ],
+                "summary": "Get all doctors",
+                "description": "",
+                "operationId": "getDoctors",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of doctors",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Doctors"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/ApiResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/doctor": {
+            "post": {
+                "tags": [
+                    "doctor"
+                ],
+                "summary": "Add a new doctor",
+                "description": "",
+                "operationId": "addDoctor",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Doctor"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The doctor that was inserted",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Doctor"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/ApiResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/visit/{id}": {
+            "get": {
+                "tags": [
+                    "visit"
+                ],
+                "summary": "Get a visit by Id",
+                "description": "",
+                "operationId": "getVisit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The visit with the given ID",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Visit"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/ApiResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/visit/patient/{id}": {
+            "get": {
+                "tags": [
+                    "visit"
+                ],
+                "summary": "Get visit(s) by patient Id",
+                "description": "",
+                "operationId": "getPatientVisits",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The visit(s) with the given patient ID",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Visits"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/ApiResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/visit/doctor/{id}": {
+            "get": {
+                "tags": [
+                    "visit"
+                ],
+                "summary": "Get visit(s) by doctor Id",
+                "description": "",
+                "operationId": "getDoctorVisits",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The visit(s) with the given doctor ID",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Visits"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/ApiResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/visit": {
+            "post": {
+                "tags": [
+                    "visit"
+                ],
+                "summary": "Add a new visit",
+                "description": "",
+                "operationId": "addVisit",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Visit"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The visit that was inserted",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/Visit"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Invalid input",
+                        "schema": {
+                            "type": "object",
+                            "items": {
+                                "$ref": "#/definitions/ApiResponse"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Patient": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "Patients": {
+            "type": "array",
+            "items": {
+                "allOf": [
+                    {
+                        "$ref": "#/definitions/Patient"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            }
+        },
+        "Doctor": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "Doctors": {
+            "type": "array",
+            "items": {
+                "allOf": [
+                    {
+                        "$ref": "#/definitions/Doctor"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            }
+        },
+        "Visit": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "patient_id": {
+                    "type": "integer"
+                },
+                "doctor_id": {
+                    "type": "integer"
+                },
+                "completed": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "Visits": {
+            "type": "array",
+            "items": {
+                "allOf": [
+                    {
+                        "$ref": "#/definitions/Visit"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            }
+        },
+        "ApiResponse": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 400
+                },
+                "type": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

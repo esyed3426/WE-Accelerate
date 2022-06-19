@@ -1,0 +1,11 @@
+applications:
+- name: doctor-info
+  memory: 128M
+  disk_quota: 128M
+  instances: 1
+  command: DEBUG=* NODE_ENV=dev node server.js
+  buildpacks:
+  - nodejs_buildpack
+  stack: cflinuxfs3
+  env:
+    API_HOST: doctor-info.apps.cac.preview.pcf.manulife.com
