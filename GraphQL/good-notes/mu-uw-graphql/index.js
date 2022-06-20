@@ -9,4 +9,4 @@ const server = new ApolloServer({ typeDefs, resolvers });
 
 server
     .listen(PORT)
-    .then(({url}) => console.log(`Server is listening at ${url}`));
+    .then(({url}) => console.log(`Server is listening at ${url}`)); 
